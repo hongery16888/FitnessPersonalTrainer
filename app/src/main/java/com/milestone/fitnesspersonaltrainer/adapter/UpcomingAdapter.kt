@@ -20,7 +20,7 @@ class UpcomingAdapter(private val context: Context) : PagerAdapter() {
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         val view = LayoutInflater.from(context).inflate(R.layout.v_upcoming_item, null)
         container.addView(view, 0)
-        view.findViewById<LCardView>(R.id.card).cardBackgroundColor = cards[position].color
+//        view.findViewById<LCardView>(R.id.card).cardBackgroundColor = cards[position].color
 //        view.findViewById<CardView>(R.id.card).cardBackgroundColor =
 //                ContextCompat.getColorStateList(context, cards[position].color)
         view.findViewById<TextView>(R.id.title).text = cards[position].name

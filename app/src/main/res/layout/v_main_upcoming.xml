@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@android:color/black"
     android:orientation="vertical">
 
@@ -16,6 +16,20 @@
         android:paddingStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="10dp"/>
+
+    <com.zhengsr.tablib.view.flow.TabFlowLayout
+        android:id="@+id/rectflow"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        app:tab_type="rect"
+        app:tab_color="@color/colorPrimary"
+        app:tab_height="3dp"
+        app:tab_width="20dp"
+        app:tab_margin_b="3dp"
+        android:background="#FFF"
+        app:tab_scale_factor="1.2"
+        app:tab_item_autoScale="true"
+        android:layout_height="wrap_content"/>
 
     <com.example.lib.Deck
         android:id="@+id/deck_pager"
