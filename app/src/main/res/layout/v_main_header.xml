@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/video_bannner" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:layout_marginBottom="70sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FEATURED"
+                android:textSize="8sp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/shape_gray_gradient_corner_half"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dip"
+                android:paddingEnd="20dip"
+                android:text="HIIT Arms &amp; Abs"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textSize="32sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="20dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="24 min | Intensity"
+                    android:textSize="10sp"
+                    android:textColor="@android:color/white"/>
+
+                <TextView
+                    android:layout_width="3dp"
+                    android:layout_height="3dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@drawable/shape_white_gradient_corner_half"/>
+
+                <TextView
+                    android:layout_width="3dp"
+                    android:layout_height="3dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@drawable/shape_white_gradient_corner_half"/>
+
+                <TextView
+                    android:layout_width="3dp"
+                    android:layout_height="3dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@drawable/shape_white_gradient_corner_half"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="30dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_header_man"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="-15dp"
+                android:src="@drawable/ic_header_female"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="-15dp"
+                android:src="@drawable/ic_header_default"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="-15dp"
+                android:src="@drawable/ic_header_summer"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="START"
+            android:textColor="@android:color/white"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/shape_gradient_corner_half"/>
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@drawable/shape_gradient"/>
+</LinearLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:fillViewport="true"
+        android:focusableInTouchMode="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical">
+
+            <com.youth.banner.Banner
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="220dip" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="10dip">
+
+                <LinearLayout
+                    android:id="@+id/breakfast"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:gravity="center"
+                    android:background="#19FFFFFF"
+                    android:tag="breakfast">
+
+                    <TextView
+                        android:id="@+id/breakfast_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dip"
+                        android:text="Breakfast"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp"
+                        android:textColor="@color/diet_text"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lunch"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:gravity="center"
+                    android:background="#19FFFFFF"
+                    android:layout_marginStart="10dip"
+                    android:layout_marginEnd="10dip">
+
+                    <TextView
+                        android:id="@+id/lunch_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dip"
+                        android:text="Lunch"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp"
+                        android:textColor="@color/diet_text" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dinner"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:gravity="center"
+                    android:background="#19FFFFFF">
+
+                    <TextView
+                        android:id="@+id/dinner_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dip"
+                        android:text="Dinner"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp"
+                        android:textColor="@color/diet_text" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dip"
+                android:layout_marginStart="5dip"
+                android:layout_marginEnd="5dip"
+                android:background="@drawable/shape_corner_top">
+
+                <View
+                    android:layout_width="2dip"
+                    android:layout_height="13dp"
+                    android:background="#2DC9EB"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Recommended"
+                    android:textColor="@color/diet_title_text"
+                    android:paddingStart="5dp"/>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/diet_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:nestedScrollingEnabled="false"
+                android:paddingStart="5dip"
+                android:paddingEnd="5dip"
+                android:layout_marginBottom="10dip"
+                android:layout_marginStart="5dip"
+                android:layout_marginEnd="5dip"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

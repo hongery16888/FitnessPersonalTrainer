@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="course_type_select">#5351F0</color>
+    <color name="main_tab_select">#5351F0</color>
+    <color name="diet_text">#2DC9EB</color>
+    <color name="diet_title_text">#17191D</color>
+
+    <color name="progress_start">#f1e134</color>
+    <color name="progress_end">#f14a34</color>
+    <color name="progress_gray">#ffe4e4e4</color>
+
+    <color name="colorTextPrimary">#ffffff</color>
+    <color name="colorTextSecondary">#A3FFFFFF</color>
+    <color name="colorBadge">#f4d415</color>
+
+    <color name="blue">#3F51B5</color>
+    <color name="red">#F44336</color>
+    <color name="green">#4CAF50</color>
+    <color name="yellow">#FFEB3B</color>
+</resources>

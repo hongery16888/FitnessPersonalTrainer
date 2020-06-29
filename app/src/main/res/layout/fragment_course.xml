@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:focusableInTouchMode="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"
+            android:orientation="vertical"
+            android:descendantFocusability="blocksDescendants">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@mipmap/video_bannner" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="10 Top Girl Workouts for the Summer"
+                        android:textColor="@android:color/white"
+                        android:paddingStart="20dip"
+                        android:paddingEnd="20dip"
+                        android:textSize="28sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lose fat easily for 10 inutes"
+                        android:textColor="@android:color/white"
+                        android:paddingStart="20dip"
+                        android:paddingEnd="20dip"
+                        android:paddingTop="5dip"/>
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="20dip">
+
+                <RadioButton
+                    android:id="@+id/all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawablePadding="5dip"
+                    android:gravity="center"
+                    android:text="All"
+                    android:textColor="@drawable/course_type_text_selector"
+                    android:textSize="12sp" />
+
+                <RadioButton
+                    android:id="@+id/equipment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawablePadding="5dip"
+                    android:gravity="center"
+                    android:text="Equipment"
+                    android:textColor="@drawable/course_type_text_selector"
+                    android:textSize="12sp" />
+
+                <RadioButton
+                    android:id="@+id/sports"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawablePadding="5dip"
+                    android:gravity="center"
+                    android:text="Sports"
+                    android:textColor="@drawable/course_type_text_selector"
+                    android:textSize="12sp" />
+
+                <RadioButton
+                    android:id="@+id/dance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawablePadding="5dip"
+                    android:gravity="center"
+                    android:text="Dance"
+                    android:textColor="@drawable/course_type_text_selector"
+                    android:textSize="12sp" />
+
+                <RadioButton
+                    android:id="@+id/ranking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawablePadding="5dip"
+                    android:gravity="center"
+                    android:text="Ranking"
+                    android:textColor="@drawable/course_type_text_selector"
+                    android:textSize="12sp" />
+            </RadioGroup>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/course_recyclerr"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:nestedScrollingEnabled="false"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

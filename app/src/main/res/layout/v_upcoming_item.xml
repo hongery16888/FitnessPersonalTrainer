@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <www.linwg.org.lib.LCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:cornerRadius="10dp"
+        app:shadowColor="#4C46FD"
+        app:shadowFluidShape="linear"
+        app:shadowStartAlpha="50"
+        app:shadowSize="10dp"
+        app:leftOffset="5dp"
+        app:rightOffset="5dp"
+        app:bottomOffset="20dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="50sp"
+            android:text="Title"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center"/>
+
+
+    </www.linwg.org.lib.LCardView>
+
+</RelativeLayout>

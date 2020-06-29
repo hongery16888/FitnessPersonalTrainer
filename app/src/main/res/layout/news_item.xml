@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="100dip"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="News headline The article title is displayed here."
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:padding="10dip"
+                android:layout_weight="1"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dip">
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@mipmap/icon_time"
+                    android:layout_marginTop="1dip"
+                    android:layout_marginStart="10dip"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:text="07.Jan 2018"
+                    tools:ignore="SmallSp"
+                    android:textColor="@android:color/darker_gray"
+                    android:gravity="center_vertical"
+                    android:paddingStart="5dip"/>
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@mipmap/icon_author"
+                    android:layout_marginTop="1dip"
+                    android:layout_marginStart="30dip"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:text="author"
+                    tools:ignore="SmallSp"
+                    android:paddingStart="5dip"
+                    android:textColor="@android:color/darker_gray"
+                    android:gravity="center_vertical"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="120dip"
+            android:layout_height="80dip"
+            android:src="@mipmap/news_pic1"
+            android:layout_marginTop="10dip"
+            android:layout_marginEnd="10dip"/>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="5dip"
+        android:paddingBottom="10dip"
+        android:id="@+id/main"
+        android:background="@drawable/shape_corner">
+
+        <com.milestone.fitnesspersonaltrainer.widget.CircleImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/diet_pic1"
+            app:type="round"
+            app:radius="3dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dip"
+            android:paddingBottom="5dip"
+            android:text="Reduced fat salad"
+            android:paddingStart="5dip"
+            android:ellipsize="end"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="5dip">
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@mipmap/icon_like"
+                android:layout_marginTop="1dip"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="13dp"
+                android:gravity="center_vertical"
+                android:text="12350"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="10sp"
+                tools:ignore="SmallSp"
+                android:paddingStart="5dip"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

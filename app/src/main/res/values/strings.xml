@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Fitness Personal Trainer</string>
+
+    <string name="refresh_message">Drop-Down Refresh</string>
+    <string name="pull_to_refresh_pull_label">Pull to refresh…</string>
+    <string name="pull_to_refresh_release_label">Release to refresh…</string>
+    <string name="pull_to_refresh_refreshing_label">Loading…</string>
+
+    <string name="text_details">There is something about parenthood that gives us a sense of history and a deeply rooted desire to send on into the next generation the great things we have discovered about life. And part of that is the desire to instill in our children the love of science, of learning and particularly the love of nature.
+        \n\n\n
+Your fascination with the universe and how to explore it as we so often do in the field of astronomy can be highly academic and dry as maybe it was if you took a course in astronomy. But when you get out there in the field at night, your equipment is just right and the night sky comes alive with activity, there is no other experience like it for majesty and pure excitement. And that is the kind of experience we want our children to come to love as much as we do.</string>
+
+    <string name="total_lessons">%1$d lesson</string>
+    <string name="minutes">%1$d minutes</string>
+    <string name="minutes_rest">Time : %1$d minutes left</string>
+
+    <!--Navigation-->
+    <string name="ellipsis">&#8230;</string>
+    <string name="menu_dashboard">Main</string>
+    <string name="menu_leaderboard">Course</string>
+    <string name="menu_store">Diet</string>
+    <string name="menu_profile">Me</string>
+
+</resources>
