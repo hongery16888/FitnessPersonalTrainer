@@ -26,7 +26,6 @@
         app:tab_height="3dp"
         app:tab_width="20dp"
         app:tab_margin_b="3dp"
-        android:background="#FFF"
         app:tab_scale_factor="1.2"
         app:tab_item_autoScale="true"
         android:layout_height="wrap_content"/>
