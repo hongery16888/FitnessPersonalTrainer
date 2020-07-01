@@ -72,8 +72,6 @@ class VUpcomingAdapter(private val context: Context, private val layoutHelper: L
             override fun onItemChildClick(childView: View?, position: Int) {
                 holder.deckPager.currentItem = position
             }
-
-
         }
 
         holder.deckPager.offscreenPageLimit = 5

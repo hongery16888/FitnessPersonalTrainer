@@ -14,24 +14,23 @@ import com.milestone.fitnesspersonaltrainer.widget.ItemOffsetDecoration
 import java.util.*
 
 
-class VDemandAdapter(private val context: Context, private val layoutHelper: LayoutHelper) : DelegateAdapter.Adapter<VDemandAdapter.ViewHolder>() {
+class VAreaAdapter(private val context: Context, private val layoutHelper: LayoutHelper) : DelegateAdapter.Adapter<VAreaAdapter.ViewHolder>() {
     override fun onCreateLayoutHelper(): LayoutHelper {
         return layoutHelper
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(LayoutInflater.from(context).inflate(R.layout.v_main_demand, parent, false))
+        return ViewHolder(LayoutInflater.from(context).inflate(R.layout.v_main_area, parent, false))
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        println("----------->Position : $position")
         val datas: MutableList<String> = ArrayList()
-        for (i in 0..10) {
+        for (i in 0..5) {
             datas.add(i.toString())
         }
-        holder.hRv.layoutManager = GridLayoutManager(context, 2)
+        holder.hRv.layoutManager = GridLayoutManager(context, 3)
         holder.hRv.addItemDecoration(ItemOffsetDecoration(context, R.dimen.dp_5))
-        holder.hRv.adapter = DemandAdapter(context, datas)
+        holder.hRv.adapter = AreaAdapter(context, datas)
     }
 
     override fun getItemCount(): Int {
@@ -39,7 +38,7 @@ class VDemandAdapter(private val context: Context, private val layoutHelper: Lay
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var hRv: RecyclerView = itemView.findViewById(R.id.horizontal_rv)
+        var hRv: RecyclerView = itemView.findViewById(R.id.grad_rv)
     }
 
 }
