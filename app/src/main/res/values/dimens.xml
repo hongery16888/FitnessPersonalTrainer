@@ -4,4 +4,9 @@
     <!-- Main Activity -->
     <dimen name="main_padding">20dp</dimen>
 
+    <dimen name="time_text_size">16sp</dimen>
+    <dimen name="see_all_size">16sp</dimen>
+
+    <dimen name="dp_5">5dp</dimen>
+
 </resources>

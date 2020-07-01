@@ -32,15 +32,13 @@ class MainActivity : BaseActivity<ActivityMainBinding?, MainViewModel?>(), OnBas
 
     private fun initPara() {
         list.add(VFragment())
-//        binding!!.tabBar.setTitles("COURSE", "NEWS", "DIET").setNormalIcons(R.mipmap.icon_video_nor, R.mipmap.icon_news_nor, R.mipmap.icon_diet_nor).setSelectedIcons(R.mipmap.icon_video_sel, R.mipmap.icon_news_sel, R.mipmap.icon_diet_sel).generate()
         list.add(MainFragment())
         list.add(CourseFragment())
         list.add(DietFragment())
+        binding!!.viewPager.offscreenPageLimit = 4
         binding!!.viewPager.setScanScroll(false)
         binding!!.viewPager.adapter = BaseFragmentAdapter(supportFragmentManager, list)
         binding!!.bottomBar.setupWithNavController(binding!!.viewPager)
-
-//        binding!!.tabBar.setContainer(binding!!.viewPager)
     }
 
     override fun onFailure(errorMsg: String?) {

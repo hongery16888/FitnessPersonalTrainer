@@ -25,19 +25,10 @@ class VUpcomingAdapter(private val context: Context, private val layoutHelper: L
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        println("----------->Position : $position")
         val datas: MutableList<String> = ArrayList()
-        for (i in 0..4) {
+        for (i in 0..9) {
             datas.add(i.toString())
         }
-
-//        holder.datePicker.setInitialDate(2019, 3, 21);
-//
-//        val dates = arrayOf(Calendar.getInstance().time)
-//        holder.datePicker.setDateTextColor(Color.RED);
-//        holder.datePicker.setDayTextColor(Color.RED);
-//        holder.datePicker.setMonthTextColor(Color.RED);
-//        holder.datePicker.deactivateDates(dates)
 
         val lists = ArrayList<String?>()
         lists.add("05:30")
@@ -51,14 +42,14 @@ class VUpcomingAdapter(private val context: Context, private val layoutHelper: L
         lists.add("13:00")
         lists.add("16:00")
 
-        holder.tabFlow.setAdapter(object : TabFlowAdapter<String?>(R.layout.item_msg, lists) {
+        holder.tabFlow.adapter = object : TabFlowAdapter<String?>(R.layout.item_msg, lists) {
             override fun onItemSelectState(view: View, isSelected: Boolean) {
                 super.onItemSelectState(view, isSelected)
                 //选中时，可以改变不同颜色，如果你的background 为 selector，可以不写这个
                 if (isSelected) {
-                    setTextColor(view, R.id.item_text, Color.WHITE)
+                    setTextColor(view, R.id.time_text, Color.parseColor("#5191F0"))
                 } else {
-                    setTextColor(view, R.id.item_text, context.getResources().getColor(R.color.green))
+                    setTextColor(view, R.id.time_text, Color.WHITE)
                 }
             }
 
@@ -69,22 +60,29 @@ class VUpcomingAdapter(private val context: Context, private val layoutHelper: L
                  * 然后重写 onItemChildClick(..) 即可拿到事件，否则就自己写。
                  * 自己的点击和长按不需要注册
                  */
-                setText(view, R.id.item_text, data)
-                        .setTextColor(view, R.id.item_text, context.getResources().getColor(R.color.green))
-                if (position == 0) {
-                    setVisible(view, R.id.item_msg, true)
-                }
+                setText(view, R.id.time_text, data)
+                        .setTextColor(view, R.id.time_text, Color.WHITE)
 
                 // 注册子控件的点击事件
-                //addChildrenClick(view,R.id.item_text,position);
+                addChildrenClick(view,R.id.time_text,position);
                 //注册子控件的长按事件
-                //addChildrenLongClick(view,R.id.item_text,position);
+                //addChildrenLongClick(view,R.id.time_text,position);
             }
 
-        })
+            override fun onItemChildClick(childView: View?, position: Int) {
+                holder.deckPager.currentItem = position
+            }
+
+
+        }
 
         holder.deckPager.offscreenPageLimit = 5
         holder.deckPager.adapter = UpcomingAdapter(context)
+
+        holder.tabFlow.setTextId(R.id.time_text)
+        holder.tabFlow.setUnSelectedColor(Color.parseColor("#5191F0"))
+        holder.tabFlow.setSelectedColor(Color.WHITE)
+        holder.tabFlow.setViewPager(holder.deckPager)
     }
 
     override fun getItemCount(): Int {

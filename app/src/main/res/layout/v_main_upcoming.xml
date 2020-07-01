@@ -17,23 +17,45 @@
         android:layout_marginTop="20dp"
         android:layout_marginBottom="10dp"/>
 
-    <com.zhengsr.tablib.view.flow.TabFlowLayout
-        android:id="@+id/rectflow"
+    <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        app:tab_type="rect"
-        app:tab_color="@color/colorPrimary"
-        app:tab_height="3dp"
-        app:tab_width="20dp"
-        app:tab_margin_b="3dp"
-        app:tab_scale_factor="1.2"
-        app:tab_item_autoScale="true"
-        android:layout_height="wrap_content"/>
+        android:orientation="horizontal"
+        android:gravity="center_vertical|end">
+
+        <com.zhengsr.tablib.view.flow.TabFlowLayout
+            android:id="@+id/rectflow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:tab_type="rect"
+            app:tab_color="@color/colorPrimary"
+            app:tab_height="3dp"
+            app:tab_width="20dp"
+            app:tab_margin_b="3dp"
+            app:tab_scale_factor="1.2"
+            app:tab_item_autoScale="true"
+            android:layout_alignStart="@id/upcoming_see_all"/>
+
+        <TextView
+            android:id="@+id/upcoming_see_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SEE ALL"
+            android:textSize="@dimen/see_all_size"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="10dp"
+            android:paddingTop="5dp"
+            android:layout_marginEnd="@dimen/main_padding"
+            android:layout_gravity="end"/>
+
+    </LinearLayout>
 
     <com.example.lib.Deck
         android:id="@+id/deck_pager"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="250dp"
         android:layout_centerInParent="true"/>
 
 </LinearLayout>

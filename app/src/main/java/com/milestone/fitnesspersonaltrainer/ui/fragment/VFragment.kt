@@ -6,6 +6,7 @@ import com.alibaba.android.vlayout.DelegateAdapter
 import com.alibaba.android.vlayout.VirtualLayoutManager
 import com.alibaba.android.vlayout.layout.LinearLayoutHelper
 import com.milestone.fitnesspersonaltrainer.R
+import com.milestone.fitnesspersonaltrainer.adapter.VDemandAdapter
 import com.milestone.fitnesspersonaltrainer.adapter.VHeaderAdapter
 import com.milestone.fitnesspersonaltrainer.adapter.VTrendingAdapter
 import com.milestone.fitnesspersonaltrainer.adapter.VUpcomingAdapter
@@ -41,7 +42,7 @@ internal class VFragment : BaseFragment<FragmentVBinding?, CourseViewModel?>() {
         delegateAdapter.addAdapter(VHeaderAdapter(context!!, LinearLayoutHelper()))
         delegateAdapter.addAdapter(VTrendingAdapter(context!!, LinearLayoutHelper()))
         delegateAdapter.addAdapter(VUpcomingAdapter(context!!, LinearLayoutHelper()))
-
+        delegateAdapter.addAdapter(VDemandAdapter(context!!, LinearLayoutHelper()))
     }
 
 }
