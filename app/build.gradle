@@ -88,6 +88,8 @@ dependencies {
 
     implementation 'com.vivekkaushik.datepicker:datePickerTimeline:0.0.4'
 
+    implementation 'com.gcssloop.widget:rclayout:1.8.1'
+
     api('com.alibaba.android:vlayout:1.2.8@aar') {
         transitive = true
     }

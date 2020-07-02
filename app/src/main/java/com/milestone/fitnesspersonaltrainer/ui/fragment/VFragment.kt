@@ -43,6 +43,9 @@ internal class VFragment : BaseFragment<FragmentVBinding?, CourseViewModel?>() {
         delegateAdapter.addAdapter(VChallengesAdapter(context!!, LinearLayoutHelper()))
         delegateAdapter.addAdapter(VAreaAdapter(context!!, LinearLayoutHelper()))
         delegateAdapter.addAdapter(VTimeAdapter(context!!, LinearLayoutHelper()))
+        delegateAdapter.addAdapter(VIntensityAdapter(context!!, LinearLayoutHelper()))
+        delegateAdapter.addAdapter(VDailyFixAdapter(context!!, LinearLayoutHelper()))
+        delegateAdapter.addAdapter(VCelebrityAdapter(context!!, LinearLayoutHelper()))
     }
 
 }

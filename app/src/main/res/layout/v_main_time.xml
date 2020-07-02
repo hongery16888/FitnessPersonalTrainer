@@ -43,7 +43,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/dp_3"
                 android:foreground="?android:attr/selectableItemBackground"
-                app:cardCornerRadius="10dp">
+                app:cardCornerRadius="9dp">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -77,14 +77,14 @@
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/dp_3"
                 android:foreground="?android:attr/selectableItemBackground"
-                app:cardCornerRadius="10dp">
+                app:cardCornerRadius="9dp">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/white"
                     android:gravity="center"
-                    android:text="5-10"
+                    android:text="10-20"
                     android:textColor="@color/colorPrimary"
                     android:textSize="16sp" />
             </androidx.cardview.widget.CardView>
@@ -111,14 +111,14 @@
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/dp_3"
                 android:foreground="?android:attr/selectableItemBackground"
-                app:cardCornerRadius="10dp">
+                app:cardCornerRadius="9dp">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/white"
                     android:gravity="center"
-                    android:text="5-10"
+                    android:text="20-30"
                     android:textColor="@color/colorPrimary"
                     android:textSize="16sp" />
             </androidx.cardview.widget.CardView>
@@ -144,14 +144,14 @@
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/dp_3"
                 android:foreground="?android:attr/selectableItemBackground"
-                app:cardCornerRadius="10dp">
+                app:cardCornerRadius="9dp">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/white"
                     android:gravity="center"
-                    android:text="5-10"
+                    android:text="30+"
                     android:textColor="@color/colorPrimary"
                     android:textSize="16sp" />
             </androidx.cardview.widget.CardView>

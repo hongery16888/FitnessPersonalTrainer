@@ -29,7 +29,7 @@ public class TrendingAdapter(private val mContext: Context, private val mDataLis
     override fun getItemCount(): Int = mDataList!!.size
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(mContext).inflate(R.layout.item_card, parent, false)
+        val view = LayoutInflater.from(mContext).inflate(R.layout.v_trending_item, parent, false)
         return ViewHolder(view)
     }
 
