@@ -11,7 +11,7 @@ import com.makeramen.roundedimageview.RoundedImageView
 import com.milestone.fitnesspersonaltrainer.R
 
 
-public class CelebrityAdapter(private val mContext: Context, private val mDataList: MutableList<String>?) : RecyclerView.Adapter<CelebrityAdapter.ViewHolder>() {
+public class TrainersAdapter(private val mContext: Context, private val mDataList: MutableList<String>?) : RecyclerView.Adapter<TrainersAdapter.ViewHolder>() {
 
     private val imageUrls: MutableList<Int> = listOf(
             R.drawable.animal_bg,
@@ -27,7 +27,7 @@ public class CelebrityAdapter(private val mContext: Context, private val mDataLi
     override fun getItemCount(): Int = mDataList!!.size
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(mContext).inflate(R.layout.v_celebrity_item, parent, false)
+        val view = LayoutInflater.from(mContext).inflate(R.layout.v_trainers_item, parent, false)
         return ViewHolder(view)
     }
 
@@ -35,5 +35,7 @@ public class CelebrityAdapter(private val mContext: Context, private val mDataLi
         var title: TextView? = itemView?.findViewById(R.id.title)
     }
 
-
+    override fun getItemViewType(position: Int): Int {
+        return 101
+    }
 }

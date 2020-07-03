@@ -14,20 +14,22 @@ import com.milestone.fitnesspersonaltrainer.widget.ItemOffsetDecoration
 import java.util.*
 
 
-class VIntensityAdapter(private val context: Context, private val layoutHelper: LayoutHelper) : DelegateAdapter.Adapter<VIntensityAdapter.ViewHolder>() {
+class VTrainersAdapter(private val context: Context, private val layoutHelper: LayoutHelper) : DelegateAdapter.Adapter<VTrainersAdapter.ViewHolder>() {
     override fun onCreateLayoutHelper(): LayoutHelper {
         return layoutHelper
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(LayoutInflater.from(context).inflate(R.layout.v_main_intensity, parent, false))
+        return ViewHolder(LayoutInflater.from(context).inflate(R.layout.v_main_trainers, parent, false))
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val datas: MutableList<String> = ArrayList()
-        for (i in 0..5) {
-            datas.add(i.toString())
+        for (i in 0..19) {
+            datas.add("Magic $i")
         }
+        holder.hRv.layoutManager = GridLayoutManager(context, 4)
+        holder.hRv.adapter = CelebrityAdapter(context, datas)
     }
 
     override fun getItemCount(): Int {
@@ -35,11 +37,11 @@ class VIntensityAdapter(private val context: Context, private val layoutHelper: 
     }
 
 //    override fun getItemViewType(position: Int): Int {
-//        return 8
+//        return 11
 //    }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
+        var hRv: RecyclerView = itemView.findViewById(R.id.grad_rv)
     }
 
 }

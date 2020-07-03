@@ -87,6 +87,10 @@ class VUpcomingAdapter(private val context: Context, private val layoutHelper: L
         return 1
     }
 
+//    override fun getItemViewType(position: Int): Int {
+//        return 3
+//    }
+
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 //        var datePicker: DatePickerTimeline = itemView.findViewById(R.id.datePickerTimeline)
         var tabFlow: TabFlowLayout = itemView.findViewById(R.id.rectflow)

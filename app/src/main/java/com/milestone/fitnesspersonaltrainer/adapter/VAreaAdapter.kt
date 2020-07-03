@@ -29,13 +29,16 @@ class VAreaAdapter(private val context: Context, private val layoutHelper: Layou
             datas.add(i.toString())
         }
         holder.hRv.layoutManager = GridLayoutManager(context, 3)
-        holder.hRv.addItemDecoration(ItemOffsetDecoration(context, R.dimen.dp_5))
         holder.hRv.adapter = AreaAdapter(context, datas)
     }
 
     override fun getItemCount(): Int {
         return 1
     }
+
+//    override fun getItemViewType(position: Int): Int {
+//        return 6
+//    }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var hRv: RecyclerView = itemView.findViewById(R.id.grad_rv)

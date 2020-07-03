@@ -29,13 +29,16 @@ class VCelebrityAdapter(private val context: Context, private val layoutHelper: 
             datas.add("Magic $i")
         }
         holder.hRv.layoutManager = GridLayoutManager(context, 4)
-        holder.hRv.addItemDecoration(ItemOffsetDecoration(context, R.dimen.dp_5))
         holder.hRv.adapter = CelebrityAdapter(context, datas)
     }
 
     override fun getItemCount(): Int {
         return 1
     }
+
+//    override fun getItemViewType(position: Int): Int {
+//        return 10
+//    }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var hRv: RecyclerView = itemView.findViewById(R.id.grad_rv)

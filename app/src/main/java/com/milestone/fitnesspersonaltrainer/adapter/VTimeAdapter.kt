@@ -34,6 +34,10 @@ class VTimeAdapter(private val context: Context, private val layoutHelper: Layou
         return 1
     }
 
+//    override fun getItemViewType(position: Int): Int {
+//        return 7
+//    }
+
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     }

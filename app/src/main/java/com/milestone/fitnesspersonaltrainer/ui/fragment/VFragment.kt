@@ -2,6 +2,7 @@ package com.milestone.fitnesspersonaltrainer.ui.fragment
 
 import android.os.Bundle
 import android.view.View
+import androidx.recyclerview.widget.RecyclerView
 import com.alibaba.android.vlayout.DelegateAdapter
 import com.alibaba.android.vlayout.VirtualLayoutManager
 import com.alibaba.android.vlayout.layout.LinearLayoutHelper
@@ -32,20 +33,29 @@ internal class VFragment : BaseFragment<FragmentVBinding?, CourseViewModel?>() {
 
     private fun initView() {
         manager = VirtualLayoutManager(context!!)
+        val pool = RecyclerView.RecycledViewPool();
+        pool.setMaxRecycledViews(0, 20);
+        binding?.vlayoutRv?.setRecycledViewPool(pool);
+        manager?.setRecycleOffset(300)
+//        manager?.reverseLayout = true
         binding?.vlayoutRv?.layoutManager = manager
-        val delegateAdapter = DelegateAdapter(manager, true)
-        binding?.vlayoutRv?.adapter = delegateAdapter
 
-        delegateAdapter.addAdapter(VHeaderAdapter(context!!, LinearLayoutHelper()))
-        delegateAdapter.addAdapter(VTrendingAdapter(context!!, LinearLayoutHelper()))
-        delegateAdapter.addAdapter(VUpcomingAdapter(context!!, LinearLayoutHelper()))
-        delegateAdapter.addAdapter(VDemandAdapter(context!!, LinearLayoutHelper()))
-        delegateAdapter.addAdapter(VChallengesAdapter(context!!, LinearLayoutHelper()))
-        delegateAdapter.addAdapter(VAreaAdapter(context!!, LinearLayoutHelper()))
-        delegateAdapter.addAdapter(VTimeAdapter(context!!, LinearLayoutHelper()))
-        delegateAdapter.addAdapter(VIntensityAdapter(context!!, LinearLayoutHelper()))
-        delegateAdapter.addAdapter(VDailyFixAdapter(context!!, LinearLayoutHelper()))
-        delegateAdapter.addAdapter(VCelebrityAdapter(context!!, LinearLayoutHelper()))
+        val delegateAdapter = DelegateAdapter(manager, true)
+
+        delegateAdapter.addAdapter(VCommonAdapter(context!!, LinearLayoutHelper()))
+
+        binding?.vlayoutRv?.adapter = delegateAdapter
+//        delegateAdapter.addAdapter(VHeaderAdapter(context!!, LinearLayoutHelper()))
+//        delegateAdapter.addAdapter(VTrendingAdapter(context!!, LinearLayoutHelper()))
+//        delegateAdapter.addAdapter(VUpcomingAdapter(context!!, LinearLayoutHelper()))
+//        delegateAdapter.addAdapter(VDemandAdapter(context!!, LinearLayoutHelper()))
+//        delegateAdapter.addAdapter(VChallengesAdapter(context!!, LinearLayoutHelper()))
+//        delegateAdapter.addAdapter(VAreaAdapter(context!!, LinearLayoutHelper()))
+//        delegateAdapter.addAdapter(VTimeAdapter(context!!, LinearLayoutHelper()))
+//        delegateAdapter.addAdapter(VIntensityAdapter(context!!, LinearLayoutHelper()))
+//        delegateAdapter.addAdapter(VDailyFixAdapter(context!!, LinearLayoutHelper()))
+//        delegateAdapter.addAdapter(VCelebrityAdapter(context!!, LinearLayoutHelper()))
+//        delegateAdapter.addAdapter(VTrainersAdapter(context!!, LinearLayoutHelper()))
     }
 
 }

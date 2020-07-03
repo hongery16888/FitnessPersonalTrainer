@@ -23,5 +23,9 @@ class VHeaderAdapter(private val context: Context, private val layoutHelper: Lay
         return 1
     }
 
+//    override fun getItemViewType(position: Int): Int {
+//        return 1
+//    }
+
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 }

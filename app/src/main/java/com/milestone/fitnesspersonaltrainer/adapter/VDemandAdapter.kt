@@ -30,13 +30,16 @@ class VDemandAdapter(private val context: Context, private val layoutHelper: Lay
             datas.add(i.toString())
         }
         holder.hRv.layoutManager = GridLayoutManager(context, 2)
-        holder.hRv.addItemDecoration(ItemOffsetDecoration(context, R.dimen.dp_5))
         holder.hRv.adapter = DemandAdapter(context, datas)
     }
 
     override fun getItemCount(): Int {
         return 1
     }
+
+//    override fun getItemViewType(position: Int): Int {
+//        return 4
+//    }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var hRv: RecyclerView = itemView.findViewById(R.id.horizontal_rv)

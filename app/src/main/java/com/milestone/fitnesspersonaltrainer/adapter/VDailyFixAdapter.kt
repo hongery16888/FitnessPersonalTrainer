@@ -34,6 +34,10 @@ class VDailyFixAdapter(private val context: Context, private val layoutHelper: L
         return 1
     }
 
+//    override fun getItemViewType(position: Int): Int {
+//        return 9
+//    }
+
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var hRv: RecyclerView = itemView.findViewById(R.id.horizontal_rv)
     }
