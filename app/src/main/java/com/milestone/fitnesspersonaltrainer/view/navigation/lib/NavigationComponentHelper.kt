@@ -13,12 +13,9 @@ class NavigationComponentHelper {
                 viewpager: VerticalViewpager,
                 smoothBottomBar: SmoothBottomBar
         ) {
-            println("------------------>NavigationComponentHelper")
             smoothBottomBar.onItemSelectedListener = object : OnItemSelectedListener {
                 override fun onItemSelect(pos: Int): Boolean {
-                    println("------------------>Item Pos : $pos")
                     viewpager.currentItem = pos
-//                    return NavigationUI.onNavDestinationSelected(menu.getItem(pos), navController)
                     return true
                 }
             }

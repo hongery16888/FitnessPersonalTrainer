@@ -1,10 +1,12 @@
 package com.milestone.fitnesspersonaltrainer.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -12,6 +14,7 @@ import com.alibaba.android.vlayout.DelegateAdapter
 import com.alibaba.android.vlayout.LayoutHelper
 import com.example.lib.Deck
 import com.milestone.fitnesspersonaltrainer.R
+import com.milestone.fitnesspersonaltrainer.ui.activity.SearchActivity
 import com.milestone.fitnesspersonaltrainer.widget.ItemOffsetDecoration
 import com.zhengsr.tablib.view.adapter.TabFlowAdapter
 import com.zhengsr.tablib.view.flow.TabFlowLayout
@@ -38,8 +41,8 @@ class VCommonAdapter(private val context: Context, private val layoutHelper: Lay
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return when(viewType){
             FLAG_HEADER -> HeaderViewHolder(LayoutInflater.from(context).inflate(R.layout.v_main_header, parent, false))
-            FLAG_UPCOMING -> UpcomingViewHolder(LayoutInflater.from(context).inflate(R.layout.v_main_upcoming, parent, false))
             FLAG_TRENDING -> TrendingViewHolder(LayoutInflater.from(context).inflate(R.layout.v_main_trending, parent, false))
+            FLAG_UPCOMING -> UpcomingViewHolder(LayoutInflater.from(context).inflate(R.layout.v_main_upcoming, parent, false))
             FLAG_DEMAND -> DemandViewHolder(LayoutInflater.from(context).inflate(R.layout.v_main_demand, parent, false))
             FLAG_CHALLENGES -> ChallengesViewHolder(LayoutInflater.from(context).inflate(R.layout.v_main_challenges, parent, false))
             FLAG_TARGET_AREA -> AreaViewHolder(LayoutInflater.from(context).inflate(R.layout.v_main_area, parent, false))
@@ -55,6 +58,9 @@ class VCommonAdapter(private val context: Context, private val layoutHelper: Lay
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when(holder){
             is HeaderViewHolder -> {
+                holder.searchBtn.setOnClickListener {
+                    context.startActivity(Intent(context, SearchActivity::class.java))
+                }
             }
 
             is UpcomingViewHolder ->{
@@ -206,7 +212,9 @@ class VCommonAdapter(private val context: Context, private val layoutHelper: Lay
         return position
     }
 
-    inner class HeaderViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+    inner class HeaderViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+        var searchBtn: ImageView = itemView.findViewById(R.id.search_btn)
+    }
 
     inner class UpcomingViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         var tabFlow: TabFlowLayout = itemView.findViewById(R.id.rectflow)
