@@ -7,7 +7,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_2"
+        android:layout_height="@dimen/dp_5"
         android:background="@drawable/shape_gradient"/>
 
     <TextView
@@ -33,7 +33,7 @@
         android:id="@+id/horizontal_rv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/black"
+        android:background="@android:color/white"
         android:clipToPadding="false"
         android:paddingStart="20dp"
         android:layout_marginTop="@dimen/dp_20"

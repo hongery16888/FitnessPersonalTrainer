@@ -42,4 +42,6 @@ Your fascination with the universe and how to explore it as we so often do in th
         <item>Pear</item>
         <item>Strawberry</item>
     </string-array>
+
+    <string name="search_hint">Search…</string>
 </resources>

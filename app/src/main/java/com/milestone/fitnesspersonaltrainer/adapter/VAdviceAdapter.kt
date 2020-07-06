@@ -32,7 +32,7 @@ class VAdviceAdapter(private val context: Context, private val layoutHelper: Lay
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return when(viewType){
             FLAG_ADVICE_HEADER -> HeaderViewHolder(LayoutInflater.from(context).inflate(R.layout.v_advice_header, parent, false))
-            FLAG_ADVICE_TRAINER_TIPS -> HeaderViewHolder(LayoutInflater.from(context).inflate(R.layout.v_advice_trainer_tips, parent, false))
+            FLAG_ADVICE_TRAINER_TIPS -> TrainerTipsViewHolder(LayoutInflater.from(context).inflate(R.layout.v_advice_trainer_tips, parent, false))
             else -> HeaderViewHolder(LayoutInflater.from(context).inflate(R.layout.v_advice_header, parent, false))
         }
     }

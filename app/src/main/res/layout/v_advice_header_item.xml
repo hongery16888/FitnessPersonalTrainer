@@ -32,7 +32,7 @@
                 android:layout_weight="1"
                 android:lines="3"
                 android:text="Easy Pizza Sauce Magic Test Thing OK Not Losing Weogjt? Here's Why You May Actually Need to Eat More"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:textSize="18sp" />
 
         </LinearLayout>
