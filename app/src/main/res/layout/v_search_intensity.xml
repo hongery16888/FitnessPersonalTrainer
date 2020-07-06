@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical">
+
+   <View
+        style="@style/DivideLine"
+       android:background="@drawable/shape_gradient"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginBottom="@dimen/dp_10"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:paddingStart="20dp"
+        android:text="Intensity"
+        android:textColor="@android:color/white"
+        android:textSize="26dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:text="Low"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:layout_weight="1"
+            android:background="@drawable/shape_corner_stroke" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:text="Medium"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:layout_weight="1"
+            android:background="@drawable/shape_corner_stroke" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:text="High"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:layout_weight="1"
+            android:background="@drawable/shape_corner_stroke" />
+
+    </LinearLayout>
+
+</LinearLayout>

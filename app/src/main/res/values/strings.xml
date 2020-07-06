@@ -17,8 +17,29 @@ Your fascination with the universe and how to explore it as we so often do in th
     <!--Navigation-->
     <string name="ellipsis">&#8230;</string>
     <string name="menu_dashboard">Main</string>
-    <string name="menu_leaderboard">Course</string>
+    <string name="menu_leaderboard">Advice</string>
     <string name="menu_store">Diet</string>
     <string name="menu_profile">Me</string>
 
+
+    <string name="bt_clearHistory">Clear history</string>
+    <string name="bt_clearSuggestions">Clear suggestions</string>
+    <string name="bt_clearAll">Clear all</string>
+
+    <string-array name="suggestions">
+        <item>Apple</item>
+        <item>Apricot</item>
+        <item>Avocado</item>
+        <item>Banana</item>
+        <item>Blueberry</item>
+        <item>Blackberry</item>
+        <item>Carrot</item>
+        <item>Cherry</item>
+        <item>Orange</item>
+        <item>Potato</item>
+        <item>Peach</item>
+        <item>Passion fruit</item>
+        <item>Pear</item>
+        <item>Strawberry</item>
+    </string-array>
 </resources>

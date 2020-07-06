@@ -7,6 +7,8 @@
     <dimen name="time_text_size">16sp</dimen>
     <dimen name="see_all_size">16sp</dimen>
 
+    <dimen name="tabbar_height">60dp</dimen>
+
     <dimen name="px_1">1px</dimen>
     <dimen name="dp_0">0dp</dimen>
     <dimen name="dp_2">2dp</dimen>
@@ -18,5 +20,5 @@
     <dimen name="dp_20">20dp</dimen>
     <dimen name="dp_30">30dp</dimen>
     <dimen name="dp_40">40dp</dimen>
-
+    <dimen name="dp_60">60dp</dimen>
 </resources>
