@@ -24,4 +24,7 @@
 
     <color name="search_transparent_mask">#50000000</color>
     <color name="divider_line">#BCBCBC</color>
+
+    <color name="common_gray">#DDDDDD</color>
+    <color name="common_dark_gray">#6C6C6C</color>
 </resources>

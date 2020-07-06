@@ -37,7 +37,6 @@ internal class VFragment : BaseFragment<FragmentVBinding?, CourseViewModel?>() {
         pool.setMaxRecycledViews(0, 20);
         binding?.vlayoutRv?.setRecycledViewPool(pool);
         manager?.setRecycleOffset(300)
-//        manager?.reverseLayout = true
         binding?.vlayoutRv?.layoutManager = manager
 
         val delegateAdapter = DelegateAdapter(manager, true)
@@ -45,17 +44,6 @@ internal class VFragment : BaseFragment<FragmentVBinding?, CourseViewModel?>() {
         delegateAdapter.addAdapter(VCommonAdapter(context!!, LinearLayoutHelper()))
 
         binding?.vlayoutRv?.adapter = delegateAdapter
-//        delegateAdapter.addAdapter(VHeaderAdapter(context!!, LinearLayoutHelper()))
-//        delegateAdapter.addAdapter(VTrendingAdapter(context!!, LinearLayoutHelper()))
-//        delegateAdapter.addAdapter(VUpcomingAdapter(context!!, LinearLayoutHelper()))
-//        delegateAdapter.addAdapter(VDemandAdapter(context!!, LinearLayoutHelper()))
-//        delegateAdapter.addAdapter(VChallengesAdapter(context!!, LinearLayoutHelper()))
-//        delegateAdapter.addAdapter(VAreaAdapter(context!!, LinearLayoutHelper()))
-//        delegateAdapter.addAdapter(VTimeAdapter(context!!, LinearLayoutHelper()))
-//        delegateAdapter.addAdapter(VIntensityAdapter(context!!, LinearLayoutHelper()))
-//        delegateAdapter.addAdapter(VDailyFixAdapter(context!!, LinearLayoutHelper()))
-//        delegateAdapter.addAdapter(VCelebrityAdapter(context!!, LinearLayoutHelper()))
-//        delegateAdapter.addAdapter(VTrainersAdapter(context!!, LinearLayoutHelper()))
     }
 
 }

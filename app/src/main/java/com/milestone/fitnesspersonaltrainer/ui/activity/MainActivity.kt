@@ -32,7 +32,7 @@ class MainActivity : BaseActivity<ActivityMainBinding?, MainViewModel?>(), OnBas
 
     private fun initPara() {
         list.add(VFragment())
-        list.add(MainFragment())
+        list.add(AdviceFragment())
         list.add(CourseFragment())
         list.add(DietFragment())
         binding!!.viewPager.offscreenPageLimit = 4
