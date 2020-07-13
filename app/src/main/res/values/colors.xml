@@ -27,4 +27,6 @@
 
     <color name="common_gray">#DDDDDD</color>
     <color name="common_dark_gray">#6C6C6C</color>
+
+    <color name="title_pink">#ff64a2</color>
 </resources>

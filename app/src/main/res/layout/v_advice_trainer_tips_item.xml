@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="140dp"
     android:layout_height="wrap_content"
-    android:paddingEnd="@dimen/dp_20"
+    android:paddingEnd="@dimen/dp_10"
     android:orientation="vertical">
 
         <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/cover"
-            android:layout_width="120dp"
+            android:layout_width="130dp"
             android:layout_height="200dp"
             android:scaleType="centerCrop"
             app:riv_corner_radius="8dp"
